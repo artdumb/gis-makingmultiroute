@@ -30,7 +30,7 @@ def pointroute(ori_lng, ori_lat, des_lng, des_lat, mode='transit', depart_time='
         'origin='+str(ori_lat)+','+str(ori_lng) + '&'\
         'destination='+str(des_lat)+','+str(des_lng)+'&'\
         'mode='+mode+'&'\
-        'departure_time='+depart_time+'&key=AIzaSyAh5evFBv_28Sa0-d45pyrVpTvXaxfuSlI'
+        'departure_time='+depart_time+'&key=APIKEY'
     response = requests.get(URL)
     data = json.loads(response.text)
     return data['routes'][0]['legs'][0]
